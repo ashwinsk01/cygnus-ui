@@ -19,7 +19,7 @@ Clone the theme repository::
 
 Render your theme::
     
-    tutor config render --extra-config ./indigo/config.yml ./indigo/theme "$(tutor config printroot)/env/build/openedx/themes/indigo"
+    tutor config render --extra-config ./cygnus-ui/config.yml ./cygnus-ui/theme "$(tutor config printroot)/env/build/openedx/themes/cygnus-ui"
 
 Rebuild the Openedx docker image::
 
@@ -31,7 +31,7 @@ Restart your platform::
     
 You will then have to enable the "indigo" theme, as per the `Tutor documentation <https://docs.tutor.overhang.io/local.html#setting-a-new-theme>`__::
     
-    tutor local settheme indigo localhost studio.localhost \
+    tutor local settheme cygnus-ui localhost studio.localhost \
         $(tutor config printvalue LMS_HOST) $(tutor config printvalue CMS_HOST)
 
 Upgrade
@@ -53,9 +53,9 @@ Setting custom values
 A few settings in the theme can be easily customised: this includes the theme primary color, landing page tagline, footer legal links. Theme settings are defined in the `config.yml <https://github.com/overhangio/indigo/blob/master/config.yml>`__ file at the root of the repository. You can override all or part of those settings by creating you own ``config-custom.yml`` file. Then, render the theme with::
     
     tutor config render \
-        --extra-config ./indigo/config.yml \
-        --extra-config ./indigo/config-custom.yml \
-        ./indigo/theme "$(tutor config printroot)/env/build/openedx/themes/indigo"
+        --extra-config ./cygnus-ui/config.yml \
+        --extra-config ./cygnus-ui/config-custom.yml \
+        ./cygnus-ui/theme "$(tutor config printroot)/env/build/openedx/themes/cygnus-ui"
 
 Changing the default logo and other images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
