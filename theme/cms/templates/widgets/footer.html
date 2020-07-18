@@ -1,0 +1,37 @@
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+%>
+
+<div class="wrapper-footer wrapper">
+  <footer class="primary" role="contentinfo">
+
+    <div class="footer-content-primary">
+      <div class="colophon">
+        <p>&copy; 2020 <a data-rel="dicodoc.co" href="${marketing_link('ROOT')}" rel="external">${settings.PLATFORM_NAME}</a>.</p>
+      </div>
+
+      % if is_any_marketing_link_set(['TOS', 'PRIVACY']):
+        <nav class="nav-peripheral">
+          <ol>
+            % if is_marketing_link_set('TOS'):
+              <li class="nav-item nav-peripheral-tos">
+                <a data-rel="edx.org" href="${marketing_link('TOS')}">${_("Terms of Service")}</a>
+              </li>
+            % endif
+            % if is_marketing_link_set('PRIVACY'):
+              <li class="nav-item nav-peripheral-pp">
+                <a data-rel="edx.org" href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a>
+              </li>
+            % endif
+          </ol>
+        </nav>
+      % endif
+    </div>
+
+    <div class="footer-content-secondary" aria-label="{_('Legal')}">
+    </div>
+  </footer>
+</div>
+
+ 
