@@ -1,12 +1,7 @@
-Indigo, a cool blue theme for Open edX
+Cygnus UI
 ======================================
 
-Indigo is an elegant, customizable theme for `Open edX <https://open.edx.org>`__.
-
-.. image:: ./screenshots/01-landing-page.png
-    :alt: Platform landing page
-
-**Note**: This version of the Indigo theme is compatible with the Juniper release of Open edX.
+**Note**: This version is compatible with the Juniper release of Open edX.
 
 Installation
 ------------
